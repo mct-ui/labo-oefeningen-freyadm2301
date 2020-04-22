@@ -37,6 +37,9 @@ html {
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background: linear-gradient(to bottom right,#0A257D, #061649);
+    background-attachment: fixed;
+    color: white;
 }
 
 *,
@@ -382,6 +385,18 @@ a:focus {
 /*------------------------------------*\
   #COMPONENTS
 \*------------------------------------*/
+
+/*
+    Component: Logo
+    ---
+    Website main logo
+*/
+
+.c-logo {
+    height: 32px;
+
+
+}
 
 /*------------------------------------*\
   #UTILITIES
