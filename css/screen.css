@@ -167,7 +167,7 @@ hr {
 }
 
 a {
-    color: #1195F7;
+    color: white;
     transition: all .1s ease-in-out;
 }
 
@@ -175,7 +175,7 @@ a:visited,
 a:active,
 a:hover,
 a:focus {
-    color: #8EC7FF;
+    color: white;
 }
 
 /*------------------------------------*\
@@ -394,8 +394,48 @@ a:focus {
 
 .c-logo {
     height: 32px;
+    display: flex;
+    align-items: center;
+}
 
+.c-logo__symbol {
+    height: inherit;
+}
 
+@media (min-width: 768px) {
+    .c-logo {
+        height: 40px;
+    }
+}
+
+/*
+    Component: header
+    ---
+    Main header of the website
+*/
+
+.c-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.c-header__nav {
+    display: flex;
+}
+
+@media (min-width: 992px){
+    .c-header__logo,
+    .c-header__nav {
+        flex-grow: 1;
+        flex-basis: 50%;
+    }
+
+    .c-header__nav {
+        display: flex;
+        justify-content: flex-end;
+        
+    }
 }
 
 /*
@@ -416,8 +456,15 @@ a:focus {
     padding: 8px 0;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: white;
 }
+
+.c-nav__link:hover {
+    text-shadow: 0px 0px 8px #8EC7FF;
+    color: #DBEDFF;
+}
+
+
+
 /*------------------------------------*\
   #UTILITIES
 \*------------------------------------*/
