@@ -398,6 +398,26 @@ a:focus {
 
 }
 
+/*
+    Component: Nav
+    ---
+    Main navigation of the site
+*/
+
+.c-nav {
+    font-size: 13px;
+    line-height: 17px;
+}
+
+.c-nav__link {
+    text-decoration: none;
+    font-weight: 600;
+    display: block;
+    padding: 8px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: white;
+}
 /*------------------------------------*\
   #UTILITIES
 \*------------------------------------*/
