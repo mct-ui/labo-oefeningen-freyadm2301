@@ -169,6 +169,7 @@ hr {
 a {
     color: white;
     transition: all .1s ease-in-out;
+    text-decoration: none;
 }
 
 a:visited,
@@ -463,7 +464,22 @@ a:focus {
     color: #DBEDFF;
 }
 
+/*
+    Component: CTA link
+    ---
+    Small cta link with custom animation
+*/
 
+.c-link-cta {
+    display: inline-block;
+    line-height: 24px;
+    padding: 16px 30px;
+    background-image: linear-gradient(to right,#033AA7,#0053FB);
+}
+
+.c-link-cta:hover{
+    background-position: right center;
+}
 
 /*------------------------------------*\
   #UTILITIES
