@@ -2,21 +2,22 @@
   #FONTS
 \*------------------------------------*/
 
-@font-face {
+@font-face{
     font-family: "Clear Sans";
     font-weight: 200;
-    src: url("../fonts/ClearSans-Light-webfont.woff") format("woff");
+    src: url("/fonts/ClearSans-Light-webfont.woff") format("woff")
 }
 
-@font-face {
+@font-face{
     font-family: "Clear Sans";
     font-weight: 400;
-    src: url("../fonts/ClearSans-Regular-webfont.woff") format("woff");
+    src: url("/fonts/ClearSans-Regular-webfont.woff") format("woff")
 }
-@font-face {
+
+@font-face{
     font-family: "Clear Sans";
     font-weight: 600;
-    src: url("../fonts/ClearSans-Medium-webfont.woff") format("woff");
+    src: url("/fonts/ClearSans-Medium-webfont.woff") format("woff") 
 }
 
 /*------------------------------------*\
@@ -29,17 +30,29 @@
     Global page styles + universal box-sizing:
 */
 
+body{
+    background: rgba(10,37,125,1);
+    background: -moz-linear-gradient(-45deg, rgba(10,37,125,1) 0%, rgba(6,22,73,1) 100%);
+    background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(10,37,125,1)), color-stop(100%, rgba(6,22,73,1)));
+    background: -webkit-linear-gradient(-45deg, rgba(10,37,125,1) 0%, rgba(6,22,73,1) 100%);
+    background: -o-linear-gradient(-45deg, rgba(10,37,125,1) 0%, rgba(6,22,73,1) 100%);
+    background: -ms-linear-gradient(-45deg, rgba(10,37,125,1) 0%, rgba(6,22,73,1) 100%);
+    background: linear-gradient(135deg, rgba(10,37,125,1) 0%, rgba(6,22,73,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a257d', endColorstr='#061649', GradientType=1 );
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+}
+
 html {
     font-size: 18px;
     line-height: 32px;
     font-weight: 200;
-    font-family: "Clear Sans", Helvetica, arial, sans-serif;
+    font-family:"Clear Sans", Helvetica, arial, sans-serif;
+    color: #FFFFFF;
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background: linear-gradient(to bottom right,#0A257D, #061649);
-    background-attachment: fixed;
-    color: white;
 }
 
 *,
@@ -167,22 +180,26 @@ hr {
 }
 
 a {
-    color: white;
+    color: #1195F7;
     transition: all .1s ease-in-out;
-    text-decoration: none;
 }
 
 a:visited,
 a:active,
 a:hover,
 a:focus {
-    color: white;
+    color: #8EC7FF;
 }
 
 /*------------------------------------*\
   #OBJECTS
 \*------------------------------------*/
 
+
+.o-page__width{
+    max-width: 1300px;
+    
+}
 /*
     Objects: Row
     ---
@@ -227,7 +244,7 @@ a:focus {
 .o-container {
     margin-left: auto;
     margin-right: auto;
-    max-width: 71em; /* 71 * 18px = 1278px */
+    max-width: 63.9em; /* 56.4 * 20px = 1128px */
 }
 
 /*
@@ -387,132 +404,119 @@ a:focus {
   #COMPONENTS
 \*------------------------------------*/
 
-/*
-    Component: Logo
-    ---
-    Website main logo
-*/
+.c-header__logo{
 
-.c-logo {
     height: 32px;
-    display: flex;
-    align-items: center;
+
 }
 
-.c-logo__symbol {
-    height: inherit;
+.c-header__menu {
+    margin-left: 0;
+    padding-left: 0;
+    margin-top: 18px;
 }
 
-@media (min-width: 768px) {
-    .c-logo {
-        height: 40px;
-    }
+.c-header__menu-item {
+
+    list-style: none;
+    padding: 8px 0px 8px 0px;
+    
 }
 
-/*
-    Component: header
-    ---
-    Main header of the website
-*/
+.c-header__menu-link {
 
-.c-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.c-header__nav {
-    display: flex;
-}
-
-@media (min-width: 992px){
-    .c-header__logo,
-    .c-header__nav {
-        flex-grow: 1;
-        flex-basis: 50%;
-    }
-
-    .c-header__nav {
-        display: flex;
-        justify-content: flex-end;
-        
-    }
-}
-
-/*
-    Component: Nav
-    ---
-    Main navigation of the site
-*/
-
-.c-nav {
-    font-size: 13px;
-    line-height: 17px;
-}
-
-.c-nav__link {
     text-decoration: none;
-    font-weight: 600;
-    display: block;
-    padding: 8px 0;
-    text-transform: uppercase;
+    color: #FFFFFF;
     letter-spacing: 1px;
+    font-weight: 200;
+
+}
+.c-header__menu-link:visited {
+    color: #FFFFFF;
 }
 
-.c-nav__link:hover {
-    text-shadow: 0px 0px 8px #8EC7FF;
+.c-header__menu-link:hover {
+    transition: 0.1s ease;
+    text-shadow: 0 0 8px #8EC7FF;
     color: #DBEDFF;
+
 }
 
-/*
-    Component: CTA link
-    ---
-    Small cta link with custom animation
-*/
+.c-section__text{
+    max-width: 32em;
+    
+}
 
-.c-link-cta {
+.c-section__bigtext{
+    color: #8EC7FF;
+}
+
+@media (min-width: 748px){
+    .c-header__menu-holder{
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 56px;
+    }
+    .c-header__menu{
+        display: flex;
+        align-items: baseline;
+        height: 32px;
+    }
+    .c-header__menu-item{
+        padding-top: 4px;
+        margin-left: 36px;
+    }
+
+}
+
+.btn:hover {
+    background-position: right center; /* change the direction of the change here */
+}
+
+.c-cta__button{
+    text-decoration: none;
     display: inline-block;
     line-height: 24px;
-    padding: 16px 30px;
-    background-image: linear-gradient(to right,#033AA7,#0053FB);
+    padding: 10px 24px 10px 24px;
+    background: rgba(0,73,163,1);
+    background: -moz-linear-gradient(left, rgba(0,73,163,1) 0%, rgba(0,102,255,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(0,73,163,1)), color-stop(100%, rgba(0,102,255,1)));
+    background: -webkit-linear-gradient(left, rgba(0,73,163,1) 0%, rgba(0,102,255,1) 100%);
+    background: -o-linear-gradient(left, rgba(0,73,163,1) 0%, rgba(0,102,255,1) 100%);
+    background: -ms-linear-gradient(left, rgba(0,73,163,1) 0%, rgba(0,102,255,1) 100%);
+    background: linear-gradient(to right, rgba(0,73,163,1) 0%, rgba(0,102,255,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0049a3', endColorstr='#0066ff', GradientType=1 );
+    box-shadow: 0 0 2px ;
 }
 
-.c-link-cta:hover{
-    background-position: right center;
-}
-
-/*
-    Component: figure
-    ---
-    Special type of figure and figcaption
-*/
-
-.c-figure {
+.c-fig__holder{
+    
     position: relative;
+    padding: 0;
+    margin: 0; 
+    width: 100%;
 }
 
-.c-figure__caption {
-    line-height: 15px;
-    margin-top: 8px;
-    padding-left: 6px;
-    padding-top: 1px;
-    border: 2px solid #5051DB;
-    border-width: 0 0 0 2px;
+.c-intro__overlay{
+    width: 100%;
+    height: 100%;
+}
+figcaption{
+    margin: 0;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #FFFFFF;
+    color: black;
+    width: 260px;
+    padding: 18px;
+    text-align: right;
+    border-right: 6px solid #0053FB;
+
 }
 
-@media (min-width: 768px) {
-    .c-figure__caption--absolute {
-        position: absolute;
-        top: 0;
-        right: 0;
-        margin-right: 8px;
-        text-align: right;
-        background-color: #fff;
-        padding: 16px;
-        max-width: 260px;
-        border-width: 0 4px 0 0;
-    }
-}
+
 
 /*------------------------------------*\
   #UTILITIES
